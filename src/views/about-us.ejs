@@ -13,25 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <h1>
-            <a href="/">PlautUs</a>
-        </h1>
-        <ul class="links-list">
-            <li>
-                <a href="/">Inicio</a>
-            </li>
-            <li>
-                <a href="#">Empezá tu camino</a>
-            </li>
-            <li>
-                <a href="#">Contacto</a>
-            </li>
-            <li>
-                <a href="/users/login">Iniciar sesión</a>
-            </li>
-        </ul>
-    </header>
+    <%- include('partials/navbar') %>
     <div class="aboutUs-wrapper">
         <div class="about-us-title">
             <h1>
@@ -123,35 +105,7 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="grid">
-            <div class="footer-text">
-                <h2 class="subtitle">
-                    Contacto
-                </h2>
-            </div>
-            <div class="footer-item">
-                <a href="#">
-                    <i class="fab fa-facebook"></i>
-                </a>
-            </div>
-            <div class="footer-item">
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            <div class="footer-item">
-                <a href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-            <div class="footer-item">
-                <a href="">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
+    <%- include('partials/footer') %>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/main.js"></script>
 </body>
