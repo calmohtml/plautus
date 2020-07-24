@@ -206,7 +206,7 @@ p {
 }
 
 .mission-paragraph {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .mission-img {
@@ -221,7 +221,6 @@ footer {
     background: #3b6978;
     color: #e4e3e3;
     text-align: center;
-    padding: 60px 0;
 }
 
 .footer-text {
@@ -236,6 +235,15 @@ footer {
 
 .footer-item a i {
     color: #e4e3e3;
+}
+
+.contact {
+    background: linear-gradient(180deg, #204051 50%, #3b6978 100%);
+    padding: 60px 0;
+}
+
+.contact-title {
+    line-height: 50px;
 }
 
 .contact-wrapper {
@@ -279,8 +287,38 @@ footer {
     width: 97%
 }
 
+.contact-sendEmail {
+    width: 200px;
+    background: #3b6978;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 0;
+    text-decoration: none;
+    margin: 10px 0px;
+    font-size: 20px;
+    color: #e4e3e3;
+    cursor: pointer;
+}
+
 .email-wrapper img {
     width: 95%;
+    border-radius: 20px;
+    opacity: 0.5;
+}
+
+.links-footer {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 50px;
+}
+
+.links-footer ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.links-footer ul li {
+    list-style: none;
 }
 
 /* Fin de Footer - Desktop */

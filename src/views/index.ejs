@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
+
 <body>
     <header class="header">
         <h1>
@@ -102,7 +104,7 @@
             <div class="grid">
                 <div class="about-us-text">
                     <h2 class="subtitle">
-                        <a href="/aboutUs" style="color: #ab9859;">Sobre nosotros:</a>
+                        <a href="/aboutUs">Sobre nosotros:</a>
                     </h2>
                     <p class="paragraph">
                         Somos una organización de matemáticos, economistas y programadores que buscan hacer accesible el
@@ -165,8 +167,11 @@
                 </a>
             </div>
         </div>
-        <h2>Hablá con nosotros</h2>
-        <div class="contact-wrapper">
+        <div class="contact">
+            <h2 class="contact-title">
+                Hablá con nosotros
+            </h2>
+            <div class="contact-wrapper">
                 <form action="">
                     <div class="contact-form">
                         <div class="contact-field-left">
@@ -187,16 +192,40 @@
                         </div>
                     </div>
                     <div class="contact-field-text">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
                     </div>
-                    <a href="" class="hero-cta">Enviar mensaje</a>
+                    <button class="contact-sendEmail">
+                        Enviar mensaje
+                    </button>
                 </form>
                 <div class="email-wrapper">
                     <img src="/images/email.jpg" alt="">
-                </div> 
+                </div>
+            </div>
+            <div class="links-footer">
+                <ul>
+                    <li>
+                        <a href="">Declaración de privacidad</a>
+                    </li>
+                    <li>
+                        <a href="">Términos y condiciones</a>
+                    </li>
+                    <li>
+                        <a href="">Preguntas frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="">Estudiantes</a>
+                    </li>
+                </ul>
+                <h3>
+                    Copyright © 2020 PlautUs. Todos los derechos reservados.
+                </h3>
+            </div>
+        </div>
         </div>
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
