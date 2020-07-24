@@ -6,7 +6,10 @@ const mainController = require('../controllers/mainController')
 // ruta de home
 router.get('/', mainController.index);
 
-// ruta aboutUs
+// ruta hacia aboutUs
 router.get('/aboutUs', mainController.about)
+
+// ruta hacia members
+router.get('/members', mainController.members)
 
 module.exports = router;

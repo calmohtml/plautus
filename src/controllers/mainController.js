@@ -9,6 +9,11 @@ const mainController = {
     about: (req, res)=> {
         res.render('about-us')
     },
+
+    members: (req, res)=> {
+        res.render('plans')
+    },
+
 }
 
 module.exports = mainController
