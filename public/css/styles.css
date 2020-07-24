@@ -30,7 +30,7 @@ h1, h2, h3, i, p, a {
     color: #e4e3e3;
 }
 
-h3, p, li {
+h3, p, li, input, textarea, button {
     font-family: 'Fauna One', sans-serif;
 }
 
