@@ -1,4 +1,5 @@
-/* 
+/*
+
 Paleta de colores:
 Gris = #e4e3e3
 Verde claro = #84a9ac
@@ -255,6 +256,10 @@ footer {
     grid-template-columns: 1fr 1fr;
 }
 
+.contact-field {
+    padding: 10px 0;
+}
+
 .contact-field input {
     height: 50px;
     width: 95%;
@@ -266,16 +271,12 @@ footer {
     justify-content: center;
 }
 
-.contact-field-text {
-    
-}
-
 .contact-field-text label {
     display: block;
 }
 
 .contact-field-text textarea {
-    width: 100%
+    width: 97%
 }
 
 .email-wrapper img {
