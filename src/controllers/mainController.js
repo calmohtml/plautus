@@ -15,9 +15,8 @@ const mainController = {
     },
 
     detail: (req, res)=> {
-        res.render('')
+        res.render('detail')
     },
-
 }
 
 module.exports = mainController

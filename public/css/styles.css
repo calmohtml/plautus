@@ -13,6 +13,7 @@ font-family: Playfair Display, sans-serif;
 @import './about-us.css';
 @import './login.css';
 @import './plans.css';
+@import './detail.css';
 
 * {
     margin: 0;
