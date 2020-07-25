@@ -38,6 +38,10 @@ p {
     font-size: 20px;
 }
 
+input, textarea, button {
+    outline: none;
+}
+
 .header {
     display: flex;
     width: 90%;
