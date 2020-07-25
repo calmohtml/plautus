@@ -14,6 +14,10 @@ const mainController = {
         res.render('plans')
     },
 
+    detail: (req, res)=> {
+        res.render('')
+    },
+
 }
 
 module.exports = mainController

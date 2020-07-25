@@ -12,4 +12,7 @@ router.get('/aboutUs', mainController.about)
 // ruta hacia members
 router.get('/members', mainController.members)
 
+// ruta para detalle
+router.get('/detail', mainController.detail)
+
 module.exports = router;
