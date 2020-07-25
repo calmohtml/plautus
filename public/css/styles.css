@@ -271,6 +271,8 @@ footer {
 .contact-field input {
     height: 50px;
     width: 95%;
+    padding-left: 10px;
+    border-radius: 20px;
 }
 
 .contact-field label {
@@ -284,7 +286,9 @@ footer {
 }
 
 .contact-field-text textarea {
-    width: 97%
+    width: 97%;
+    padding: 10px 0px 0px 10px;
+    border-radius: 20px;
 }
 
 .email-wrapper img {
