@@ -24,10 +24,6 @@
     border-radius: 20px;
 }
 
-.detail-description-container:nth-child(2) {
-    background-color: wheat;
-}
-
 .detail-description {
     display: flex;
     align-items: center;
