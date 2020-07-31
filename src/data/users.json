@@ -1,0 +1,65 @@
+[{
+    "id": 1,
+    "name": "Waldo",
+    "email": "wmcgiven0@sourceforge.net",
+    "password": "id justo sit amet sapien",
+    "avatar": "https://robohash.org/consequaturquasporro.png?size=50x50&set=set1",
+    "membership_id": 1,
+    "role_id": 1
+  }, {
+    "id": 2,
+    "name": "Desiri",
+    "email": "ddorset1@google.cn",
+    "password": "pellentesque volutpat",
+    "avatar": "https://robohash.org/itaquealiquamdelectus.jpg?size=50x50&set=set1",
+    "membership_id": 2,
+    "role_id": 2
+  }, {
+    "id": 3,
+    "name": "Chantal",
+    "email": "cthorburn2@google.com",
+    "password": "convallis duis",
+    "avatar": "https://robohash.org/placeatestblanditiis.jpg?size=50x50&set=set1",
+    "membership_id": 3,
+    "role_id": 3
+  }, {
+    "id": 4,
+    "name": "Carlynne",
+    "email": "csedman3@amazon.com",
+    "password": "auctor sed tristique in tempus sit amet sem fusce consequat",
+    "avatar": "https://robohash.org/etadipisciet.jpg?size=50x50&set=set1",
+    "membership_id": 4,
+    "role_id": 4
+  }, {
+    "id": 5,
+    "name": "Bernadina",
+    "email": "battard4@fda.gov",
+    "password": "gravida tinciduntit lacinia erat",
+    "avatar": "https://robohash.org/autautarchitecto.jpg?size=50x50&set=set1",
+    "membership_id": 5,
+    "role_id": 5
+  }, {
+    "id": 6,
+    "name": "Mariette",
+    "email": "mlyptrade5@nba.com",
+    "password": "viverra ubilia itor lon mauriibendum im non sodales",
+    "avatar": "https://robohash.org/estsolutavoluptatem.png?size=50x50&set=set1",
+    "membership_id": 6,
+    "role_id": 6
+  }, {
+    "id": 7,
+    "name": "Pablo",
+    "email": "psibbit6@hexun.com",
+    "password": "ut mauris eget mas arcu sed augue aliquam erat",
+    "avatar": "https://robohash.org/utvoluptatemnobis.bmp?size=50x50&set=set1",
+    "membership_id": 7,
+    "role_id": 7
+  }, {
+    "id": 8,
+    "name": "Devy",
+    "email": "dmarkham7@ovh.net",
+    "password": "id ligula suspendiabitasse pam erat fermentum",
+    "avatar": "https://robohash.org/quisitqui.png?size=50x50&set=set1",
+    "membership_id": 8,
+    "role_id": 8
+  }]
