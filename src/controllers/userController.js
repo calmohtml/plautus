@@ -33,6 +33,10 @@ const userController = {
 		res.redirect('/')
     },
 
+    profile: (req, res)=>{
+        res.render('profile')
+    },
+
     // controlador de prueba linkeo db provisoria
     users: (req, res)=>{
         res.send({users})
