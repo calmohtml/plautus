@@ -1,0 +1,117 @@
+/* {
+    width: 400px;
+    height: auto;
+	margin: 100px auto;
+    overflow: hidden;
+} */
+
+.profile-wrapper {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+	width: 300px;
+	min-width: 300px;
+	height: auto;
+	background: #e4e3e3;
+	border-radius: 20px;
+	position: relative;
+	z-index: 10;
+	margin: 25px;
+	min-height: 356px;
+	transition: all .25s ease;
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .08);
+	cursor: pointer;
+}
+
+.card:hover {
+	transform: translate(0, -10px);
+	box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, .07);
+}
+
+.card:hover .con-img {
+	transform: translate(0, -15px);
+}
+
+.card:hover .con-img img.blur {
+	opacity: .45;
+	transform: translate(-10px, 26px) scale(.85);
+}
+
+.card h3 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding: 15px;
+}
+
+.card .con-text {
+	padding: 20px;
+}
+/*
+.item {
+    width: 25%;
+    overflow: hidden;
+    height: 220px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.item input {
+	display: none;
+}
+
+.item label {
+	display: block;
+	padding: 10px;
+	font-size: 20px;
+    color: #fff;
+    background-color: #3b6978;
+	cursor: pointer;
+	border-bottom: 2px solid #aaa;
+}
+
+.item label span {
+	padding-left: 240px;
+	transform: rotateX(45deg);
+}
+
+.item label:hover {
+	background-color: #84a9ac;
+}
+
+.item ul {
+	overflow: hidden;
+	max-height: 0;
+	transition: all .4s;
+	background-color: #fff;
+	width: 100%;		
+}
+
+.item ul li a {
+	width:100%;
+	height: 50px;
+	background-color:#fafafa;
+	display:block;
+	text-decoration:none;
+	color: #333;
+	border-bottom: 2px solid #aaa;
+	padding: 10px;
+}
+
+.item ul li a:hover {
+	background-color:#9CF;
+}
+
+.item input:checked ~ ul {
+	height:auto;
+	max-height:200px;
+	transition: all .4s linear;
+}
+
+.item input:checked ~ label span{
+	
+}
+*/

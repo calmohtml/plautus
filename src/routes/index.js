@@ -3,16 +3,16 @@ var router = express.Router();
 
 const mainController = require('../controllers/mainController')
 
-// ruta de home
+// Ruta del Home
 router.get('/', mainController.index);
 
-// ruta hacia aboutUs
+// Ruta del AboutUs
 router.get('/aboutUs', mainController.about)
 
-// ruta hacia members
+// Ruta de Members
 router.get('/members', mainController.members)
 
-// ruta para detalle
+// Ruta de detalle de PlautUs
 router.get('/detail', mainController.detail)
 
 module.exports = router;
