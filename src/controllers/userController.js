@@ -21,8 +21,8 @@ const userController = {
         let errors = validation.errors
         if (errors != '') {
             res.render('register', { errors })
-        }
-        const newUser= {
+        } else {
+           const newUser= {
             name: req.body.name,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password),
@@ -30,7 +30,8 @@ const userController = {
         }
         let newDB = [...users, newUser]
 		fs.writeFileSync(usersFilePath, JSON.stringify(newDB, null, ' '))
-		res.redirect('/')
+		res.redirect('/') 
+        }  
     },
 
     profile: (req, res)=>{
