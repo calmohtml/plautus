@@ -11,11 +11,17 @@
     margin: auto;
 }
 
+.profile-wrapper p {
+	font-size: .8rem;
+	opacity: .6;
+	margin-top: 10px;
+}
+
 .card {
 	width: 300px;
 	min-width: 300px;
 	height: auto;
-	background: #e4e3e3;
+	/* background: #e4e3e3; */
 	border-radius: 20px;
 	position: relative;
 	z-index: 10;
@@ -24,6 +30,8 @@
 	transition: all .25s ease;
 	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .08);
 	cursor: pointer;
+	border: 3px solid #e4e3e3;
+	border-radius: 20px;
 }
 
 .card:hover {
@@ -49,6 +57,53 @@
 
 .card .con-text {
 	padding: 20px;
+}
+
+.card .con-img {
+	width: calc(100% - 60px);
+	margin: 0px 30px;
+	margin-top: -90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .35s ease-out;
+}
+
+.card img {
+	height: 300px;
+}
+
+.card img.blur {
+	position: absolute;
+	filter: blur(15px);
+	z-index: -1;
+	opacity: .35;
+	transform: translate(-10px, 10px) scale(.85);
+	transition: all .35s ease-out;
+}
+
+.con-cards {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 100px;
+	padding-left: 60px;
+	padding-right: 50px;
+	scroll-behavior: smooth;
+}
+
+.con-cards::-webkit-scrollbar {
+	height: 0px;
+}
+
+.con-cards:after {
+	content: '';
+	display: block;
+	min-width: 20px;
+	height: 100px;
+	position: relative;
 }
 /*
 .item {

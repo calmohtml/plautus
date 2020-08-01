@@ -82,5 +82,11 @@
   "email": "joan@algo.com",
   "password": "$2a$10$Pmpw6xhf1pqPk0c0xs4WfOj9DClBIW2.UF7R3qqn7CtPz3TNjxyH2",
   "repeatpassword": "$2a$10$XypSyk4gk9vzrhAJBpd6I.iibDrZfs6UAjNDGP/nhovyy6pfk81Me"
+ },
+ {
+  "name": "Milton Chico",
+  "email": "miltongrande@milton.com",
+  "password": "$2a$10$IeK.357Uw8QAEWDGMFdLTOQgH7bQSwIVzygz/NsgADxBaZ0260gtm",
+  "repeatpassword": "$2a$10$QEGIdET0uGKsaWAekYwzO.HP8waMmUIAyeRFjy0GwSdZUhN3idGe."
  }
 ]
