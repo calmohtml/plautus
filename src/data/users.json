@@ -76,5 +76,11 @@
   "email": "mario@mario.com",
   "password": "$2a$10$I/rZRZEzOY27CJBIqmCeC.v6QJW5dUV0rRffE5MZN6fj11vEPkLWe",
   "repeatpassword": "$2a$10$O0HVn2j4bWbxOAFLBk00JOJ.enO1n0hL.pHJ36pP44z9qXihSSWru"
+ },
+ {
+  "name": "joan",
+  "email": "joan@algo.com",
+  "password": "$2a$10$Pmpw6xhf1pqPk0c0xs4WfOj9DClBIW2.UF7R3qqn7CtPz3TNjxyH2",
+  "repeatpassword": "$2a$10$XypSyk4gk9vzrhAJBpd6I.iibDrZfs6UAjNDGP/nhovyy6pfk81Me"
  }
 ]

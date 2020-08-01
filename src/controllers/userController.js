@@ -16,31 +16,31 @@ const userController = {
         res.render('register')
     },
 
-    storeUser: (req, res)=>{
+    storeUser: (req, res) => {
         let validation = validationResult(req)
         let errors = validation.errors
         if (errors != '') {
             res.render('register', { errors })
         } else {
-           const newUser= {
+          const newUser = {
             name: req.body.name,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password),
             repeatpassword: bcrypt.hashSync(req.body.repeatpassword)
         }
         let newDB = [...users, newUser]
-		fs.writeFileSync(usersFilePath, JSON.stringify(newDB, null, ' '))
-		res.redirect('/') 
-        }  
+        fs.writeFileSync(usersFilePath, JSON.stringify(newDB, null, ' '))
+        res.redirect('/')  
+        }
     },
 
-    profile: (req, res)=>{
+    profile: (req, res) => {
         res.render('profile')
     },
 
     // controlador de prueba linkeo db provisoria
-    users: (req, res)=>{
-        res.send({users})
+    users: (req, res) => {
+        res.send({ users })
     },
 
 }
