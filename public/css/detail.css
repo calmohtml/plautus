@@ -3,6 +3,7 @@
 .detail-wrapper {
     margin: auto;
     width: 90%;
+    max-width: 1100px;
 }
 
 .detail-wrapper h2 {
