@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+
 const bcrypt = require('bcryptjs');
 const session = require('express-session');
 const { check, validationResult, body } = require('express-validator');
@@ -22,27 +23,21 @@ const userController = {
         if (errors != '') {
             res.render('register', { errors })
         } else {
-          const newUser = {
-            name: req.body.name,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password),
-            repeatpassword: bcrypt.hashSync(req.body.repeatpassword)
-        }
-        let newDB = [...users, newUser]
-        fs.writeFileSync(usersFilePath, JSON.stringify(newDB, null, ' '))
-        res.redirect('/')  
+            const newUser = {
+                name: req.body.name,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password),
+                repeatpassword: bcrypt.hashSync(req.body.repeatpassword)
+            }
+            let newDB = [...users, newUser]
+            fs.writeFileSync(usersFilePath, JSON.stringify(newDB, null, ' '))
+            res.redirect('/users/profile')
         }
     },
 
     profile: (req, res) => {
         res.render('profile')
     },
-
-    // controlador de prueba linkeo db provisoria
-    users: (req, res) => {
-        res.send({ users })
-    },
-
 }
 
 module.exports = userController
