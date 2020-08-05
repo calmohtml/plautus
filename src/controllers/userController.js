@@ -24,6 +24,7 @@ const userController = {
             res.render('register', { errors })
         } else {
             const newUser = {
+                id: users[users.length - 1].id + 1,
                 name: req.body.name,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password),
@@ -33,6 +34,21 @@ const userController = {
             fs.writeFileSync(usersFilePath, JSON.stringify(newDB, null, ' '))
             res.redirect('/users/profile')
         }
+    },
+
+    processLogin:  (req, res) => {
+            let validation = validationResult(req)
+            let errors = validation.errors
+            if (errors == '') {
+                let userToLog = users.find(user => user.email == req.params.userEmail)
+                console.log(userToLog);
+                if (userToLog && bcrypt.compareSync(req.body.password, userToLog.password)) {
+                    // req.session.userId = userToLog.id;
+                    res.send('hola')
+                }
+            } else {
+                res.render('login', {errors})
+            }
     },
 
     profile: (req, res) => {

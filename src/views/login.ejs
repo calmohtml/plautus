@@ -5,20 +5,25 @@
     <%- include('partials/navbar') %>
     <div class="login-container">
         <div class="login-wrapper">
-            <form class="login-form" action="">
+            <form class="login-form" action="/users/login" method="POST">
                 <div class="login-avatar">
                     <i class="fas fa-user-circle"></i>
                 </div>
                 <h2>
                     Iniciar sesión
                 </h2>
+                <% if (typeof errors != "undefined") { %>
+                    <% errors.forEach(error => { %>
+                     <li style="color:red"><%= error.msg %></li>
+                      <% }) %>
+                    <% } %>
                 <div class="login-input one">
                     <div class="login-icon">
                         <i class="fas fa-user"></i>
                     </div>
                     <div>
-                        <h5>Usuario</h5>
-                        <input type="text" class="login">
+                        <h5>E-mail</h5>
+                        <input type="email" name="email" class="login">
                     </div>
                 </div>
                 <div class="login-input">
@@ -27,12 +32,12 @@
                     </div>
                     <div>
                         <h5>Contraseña</h5>
-                        <input type="password" class="login">
+                        <input type="password" name="password" class="login">
                     </div>
                 </div>
                 <div class="login-action">
                     <button class="login-button">
-                        <a href="/users/profile">Ingresar</a>
+                        Ingresar
                     </button>
                     <a href="/users/register">
                         No tenés cuenta? Registrate

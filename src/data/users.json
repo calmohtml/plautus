@@ -72,9 +72,17 @@
   "role_id": 8
  },
  {
+  "id": 9,
   "name": "Mario",
   "email": "mario@mario.com",
   "password": "$2a$10$I/rZRZEzOY27CJBIqmCeC.v6QJW5dUV0rRffE5MZN6fj11vEPkLWe",
   "repeatpassword": "$2a$10$O0HVn2j4bWbxOAFLBk00JOJ.enO1n0hL.pHJ36pP44z9qXihSSWru"
+ },
+ {
+  "id": 10,
+  "name": "Nico",
+  "email": "nicolasdorazio7@gmail.com",
+  "password": "$2a$10$sox97ynH3XfGUZcZQ09lKuMfOVlWku3hiHzRoiFpCv5drZaEm04Du",
+  "repeatpassword": "$2a$10$IjJMvccpLT0FnV6qMJ755u.SxcQmNH5aCRl0qmCiEWmKtYKoWmrf2"
  }
 ]
