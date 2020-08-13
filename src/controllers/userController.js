@@ -71,6 +71,10 @@ const userController = {
         const userInfo = await DB.User.findByPk(req.params.id)
         res.render('profile', { userInfo })
     },
+
+    editProfile: (req, res) => {
+        res.render('editProfile')
+    }
 }
 
 module.exports = userController
