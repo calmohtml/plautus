@@ -5,8 +5,14 @@ const bcrypt = require('bcryptjs');
 const session = require('express-session');
 const { check, validationResult, body } = require('express-validator');
 
+// base de datos en json
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+// base de datos en sequelize 
+const DB = require('../database/models')
+const { sequelize } = require('../database/models')
+const OP = DB.Sequelize.Op
 
 const userController = {
     login: (req, res) => {
@@ -17,42 +23,53 @@ const userController = {
         res.render('register')
     },
 
-    storeUser: (req, res) => {
+    storeUser: async (req, res) => {
         let validation = validationResult(req)
         let errors = validation.errors
         if (errors != '') {
             res.render('register', { errors })
-        } else {
-            const newUser = {
-                id: users[users.length - 1].id + 1,
-                name: req.body.name,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password),
-                repeatpassword: bcrypt.hashSync(req.body.repeatpassword)
-            }
-            let newDB = [...users, newUser]
-            fs.writeFileSync(usersFilePath, JSON.stringify(newDB, null, ' '))
-            res.redirect('/users/profile')
+        }
+        const newUser = {
+            name: req.body.name,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password)
+        }
+        try {
+            await DB.User.create(newUser)
+            return res.redirect('/users/profile')
+        } catch (error) {
+            res.send(error)
         }
     },
 
-    processLogin:  (req, res) => {
-            let validation = validationResult(req)
-            let errors = validation.errors
+    processLogin: async (req, res) => {
+        let validation = validationResult(req);
+        let errors = validation.errors;
+        try {
             if (errors == '') {
-                let userToLog = users.find(user => user.email == req.params.userEmail)
-                console.log(userToLog);
-                if (userToLog && bcrypt.compareSync(req.body.password, userToLog.password)) {
-                    // req.session.userId = userToLog.id;
-                    res.send('hola')
+                let user = await DB.User.findOne({
+                    where: {
+                        email: req.body.email
+                    }
+                });
+                if (user == undefined) {
+                    res.render('login', {errors})
+                }
+                if (user && bcrypt.compareSync(req.body.password, user.password)) {
+                    req.session.userId = user.id;
+                    res.redirect('/users/profile/' + user.id)
                 }
             } else {
                 res.render('login', {errors})
             }
+        } catch (error) {
+            res.send(error)
+        }
     },
 
-    profile: (req, res) => {
-        res.render('profile')
+    profile: async (req, res) => {
+        const userInfo = await DB.User.findByPk(req.params.id)
+        res.render('profile', { userInfo })
     },
 }
 
