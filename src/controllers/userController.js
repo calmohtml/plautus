@@ -54,6 +54,10 @@ const userController = {
     profile: (req, res) => {
         res.render('profile')
     },
+
+    editProfile: (req, res) => {
+        res.render('editProfile')
+    }
 }
 
 module.exports = userController

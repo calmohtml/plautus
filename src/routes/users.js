@@ -38,4 +38,7 @@ router.post('/register', validationMiddleware, userController.storeUser)
 /* Ruta del profile */
 router.get('/profile', userController.profile)
 
+/* Ruta de profile edit */
+router.get('/editProfile', userController.editProfile)
+
 module.exports = router;
