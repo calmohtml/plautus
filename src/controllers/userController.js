@@ -5,10 +5,6 @@ const bcrypt = require('bcryptjs');
 const session = require('express-session');
 const { check, validationResult, body } = require('express-validator');
 
-// base de datos en json
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
 // base de datos en sequelize 
 const DB = require('../database/models')
 const { sequelize } = require('../database/models')
@@ -28,17 +24,27 @@ const userController = {
         let errors = validation.errors
         if (errors != '') {
             res.render('register', { errors })
-        }
-        const newUser = {
-            name: req.body.name,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password)
-        }
-        try {
-            await DB.User.create(newUser)
-            return res.redirect('/users/profile')
-        } catch (error) {
-            res.send(error)
+        } else {
+            try {
+                const existUser = await DB.User.findAll({
+                    where: {
+                        email: req.body.email
+                    }
+                })
+
+                if (existUser.length > 0) {
+                    let errors = [{
+                        msg: 'Este usuario ya existe'
+                    }]
+                    res.render('register', { errors })
+                } else {
+                    req.body.password = bcrypt.hashSync(req.body.password, 8)
+                    let newUser = await DB.User.create(req.body)
+                    res.redirect('/users/login')
+                }
+            } catch (error) {
+                res.send(error)
+            }
         }
     },
 
@@ -53,14 +59,17 @@ const userController = {
                     }
                 });
                 if (user == undefined) {
-                    res.render('login', {errors})
+                    let errors = [{
+                        msg: 'Credenciales invalidas'
+                    }]
+                    res.render('login', { errors })
                 }
                 if (user && bcrypt.compareSync(req.body.password, user.password)) {
                     req.session.userId = user.id;
                     res.redirect('/users/profile/' + user.id)
                 }
             } else {
-                res.render('login', {errors})
+                res.render('login', { errors })
             }
         } catch (error) {
             res.send(error)

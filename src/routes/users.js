@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+const path = require('path');
 
 const multer = require('multer');
-const { check, validationResult, body } = require('express-validator');
+const { check, validationResult} = require('express-validator');
 const session = require('express-session');
 
 const validationMiddleware = require('../middlewares/validationMiddleware');
