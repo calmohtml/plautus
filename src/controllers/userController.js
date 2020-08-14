@@ -81,6 +81,11 @@ const userController = {
         res.render('profile', { userInfo })
     },
 
+    logout: (req, res) => {
+        req.session.destroy()
+        res.redirect('/users/login');
+    },
+
     editProfile: (req, res) => {
         res.render('editProfile')
     }

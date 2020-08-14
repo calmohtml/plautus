@@ -34,10 +34,13 @@ router.post('/login',[
 
 // Ruta hacia el register form
 router.get('/register', userController.register);
-router.post('/register', validationMiddleware, userController.storeUser)
+router.post('/register', validationMiddleware, userController.storeUser);
 
 /* Ruta del profile */
-router.get('/profile/:id', userController.profile)
+router.get('/profile/:id', userController.profile);
+
+// Ruta para desloguear al usuario
+router.get('/logout', userController.logout);
 
 /* Ruta de profile edit */
 router.get('/editProfile', userController.editProfile)
