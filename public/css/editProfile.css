@@ -11,7 +11,7 @@
     border-bottom-left-radius: 20px;
 }
 
-.editProfile-wrapper .editProfile-left {
+.editProfile-left {
     width: 35%;
     padding: 30px 25px;
     text-align: center;
@@ -20,24 +20,51 @@
     border-bottom-left-radius: 20px;
 }
 
-.editProfile-wrapper .editProfile-left img {
+.editProfile-left img {
     width: 300px;
     margin-bottom: 10px;
     border-radius: 20px;
 }
 
-.editProfile-wrapper .editProfile-left h3 {
+.editProfile-left h3 {
     margin-bottom: 10px;
 }
 
-.editProfile-wrapper .editProfile-left p {
+.editProfile-left p {
     font-size: 12px;
 }
 
-.editProfile-wrapper .editProfile-right {
+.editProfile-right {
     width: 65%;
     background-color: #84a9ac;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     padding: 30px 25px;
+}
+
+.info, .classes {
+    margin-bottom: 25px;
+}
+
+.info h3, .classes h3 {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #e4e3e3;
+}
+
+.info-data, .classes-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data {
+    width: 45%;
+}
+
+.data h3 {
+    margin-bottom: 5px;
+}
+
+.data p {
+    margin-bottom: 10px;
 }
