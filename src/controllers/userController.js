@@ -64,12 +64,17 @@ const userController = {
                     }]
                     res.render('login', { errors })
                 }
-                if (user && bcrypt.compareSync(req.body.password, user.password)) {
+                let userPassword = bcrypt.compareSync(req.body.password, user.password)
+                if (userPassword) {
                     req.session.userId = user.id;
                     res.redirect('/users/profile/' + user.id)
+
+                } else {
+                    let errors = [{
+                        msg: 'Credenciales invalidas'
+                    }]
+                    res.render('login', { errors })
                 }
-            } else {
-                res.render('login', { errors })
             }
         } catch (error) {
             res.send(error)
