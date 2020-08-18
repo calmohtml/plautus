@@ -28,8 +28,8 @@ const userController = require('../controllers/userController');
 // Ruta hacia el login form
 router.get('/login', userController.login);
 router.post('/login',[
-    check('email').isEmail().withMessage('E-mail no válido'),
-    check('password').isLength({ min: 5 }).withMessage('Contraseña no válida')
+    check('email').isLength({min: 0}).withMessage('E-mail no válido'),
+    check('password').isLength({ min: 0 }).withMessage('Contraseña no válida')
 ], userController.processLogin)
 
 // Ruta hacia el register form
